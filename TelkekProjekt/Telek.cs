@@ -36,5 +36,10 @@ namespace TelkekProjekt
             return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
         }
 
+        public void InformációKözlőAdatokNélkül()
+        {
+            Console.WriteLine($"| {helyrajziSzám,-5} | {ÁratSzámol(),10:N0} Ft | {KerületSzámol(),10:N2} m | {TerületSzámol(),10:N2} m² | {KerítésSzámol(),10:N2} m |");
+        }
+
     }
 }

@@ -24,14 +24,20 @@ namespace TelkekProjekt
 
             double összesÁr = 0;
             double összesKerítés = 0;
+
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────");
+            Console.WriteLine("| Telek |    Ár (Ft)   |  Kerület (m)  | Terület (m²) | Kerítés (m) |");
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────");
+
             foreach (var telek in telkek)
             {
-                telek.InformációKözlő();
+                telek.InformációKözlőAdatokNélkül();
                 összesÁr += telek.ÁratSzámol();
                 összesKerítés += telek.KerítésSzámol();
             }
-            Console.WriteLine("Összes Ár: {0:N0} Ft",összesÁr);
-            Console.WriteLine("Összes Kerítés: {0} m", összesKerítés);
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────");
+            Console.WriteLine($"| {"Összes",-5} | {összesÁr,10:N0} Ft | {"-",10} | {"-",10} | {összesKerítés,10:N2} m |");
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────");
 
             Console.ReadLine();
         }
